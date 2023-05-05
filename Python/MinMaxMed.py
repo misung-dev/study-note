@@ -18,7 +18,7 @@ else :
 
 print("You entered")
 print(number)
-print("")
+print()
 print("max :", max(number))
 print("min :", min(number))
 print(f"median : {number_median:.2f}")
