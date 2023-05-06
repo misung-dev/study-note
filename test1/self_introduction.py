@@ -1,0 +1,6 @@
+major = input("전공을 입력해주세요 : ")
+studentID = int(input("학번을 입력해주세요 : "))
+name = input("이름을 입력해주세요 : ")
+hobby = input("취미를 입력해주세요 : ")
+print("저는", major, "학부", studentID, "학번", name, "입니다.")
+print("저의 취미는", hobby, "입니다.")
