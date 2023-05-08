@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="2_main.css">
+</head>
+<body>
+    <div class="alert-box" id="alert">
+        <p id="title">Alert 박스</p>
+        <button id="close"> X </button>
+    </div>
+
+    <button onclick="알림창1열기('아이디입력해라')">버튼1</button>
+    <button onclick="알림창2열기('비번입력해라')">버튼2</button>
+
+    <script>
+
+        document.getElementById('close').addEventListener('click', function(){
+            document.getElementById('alert').style.display = 'none';
+
+        }); //'close'가 클릭되면 중괄호 안의 코드를 실행하는 코드, 'click'을 이벤트(click, keydown, scroll, mouseover 등등)라고 함. 
+
+        function 알림창1열기(){
+            document.getElementById('title').innerHTML = "아이디를 입력하세요";
+            document.getElementById('alert').style.display = 'block';
+        }
+
+        function 알림창2열기(){
+            document.getElementById('title').innerHTML = "비밀번호를 입력하세요";
+            document.getElementById('alert').innerHTML = 'block';
+        }
+    </script>
+</body>
+</html>
