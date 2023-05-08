@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="hello">안녕하세요</h2>
+    <h2 id="hi">올때메로나</h2>
+    <script> //자바스크립트의 목적: HTML의 조작과 변경
+        document.getElementById('hello').innerHTML = '안녕'; //웹문서의 ID hello인 HTML을 가져와 내부글자를 안녕으로 바꾼다.
+        document.getElementById('hello').style.color = 'red'; //-> 셀렉터라고 부름.
+        document.getElementById('hello').style.fontSize = '30px';
+        document.getElementById('hi').innerHTML = '올때바밤바';
+    </script>
+</body>
+</html>
