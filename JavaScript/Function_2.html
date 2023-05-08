@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="2_main.css">
+</head>
+<body>
+    <div class="alert-box" id="alert">
+        <p>Alert 박스</p>
+        <button onclick="알림창닫기()">닫기</button>
+    </div>
+    <button onclick="알림창열기()">버튼</button>
+
+    <script>
+        function 알림창열기(){ //function 축약된이름(){축약할 긴 코드}
+            document.getElementById('alert').style.display = 'block'; 
+        }
+        function 알림창닫기(){
+            document.getElementById('alert').style.display='none';
+        }
+        //function을 쓰면 긴 코드를 깔끔하게 한 단어로 축약 가능, 긴 코드 한글자로 치환하고 싶은 경우에 사용. + 함수 업그레이드를 위해 파라미터 사용하기
+        //변경할 HTML이 있으면, 이 하단에 JS 코딩 해야함 (HTML을 먼저 읽어야 JS로 제작 가능)(-> 흔한 버그 실수)
+        //UI 만드는 법 : 1. 미리 디자인 해두고 숨김 2. 버튼 누르면 보여짐
+    </script>
+</body>
+</html>
