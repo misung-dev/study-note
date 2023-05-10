@@ -24,7 +24,7 @@ while True:
         print()
 
     elif menu == 2:
-        print('Enter words to add (Press ENTER to finish)')
+        print('Enter words to delete (Press ENTER to finish)')
         while True:
             words = input('word: ')
             if len(words) == 0:
