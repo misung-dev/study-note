@@ -57,7 +57,7 @@ while True:
 
     elif menu == 5:
         score = 0
-        for key in dictionary:
+        for key, value in dictionary.items():
             answer = input(f"meaning of '{key}': ")
             if answer == value:
                 score += 1
