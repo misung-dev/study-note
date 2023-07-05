@@ -80,7 +80,7 @@ p {
 .blog-content {
 	width: 70%;
 	height: 350px;
-	background: beige;
+	background: #f8f5e4;
 	float: left;
 }
 
@@ -120,4 +120,20 @@ p {
 	text-align: left;
 	padding-left: 10px;
 	padding-right: 10px;
+}
+
+.navbar > li {
+	display: inline-block;
+	width: 150px;
+	text-align: center;
+	background: #3f497f;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.navbar a {
+	font-size: 15px;
+	text-decoration: none;
+	color: white;
+	font-weight: 500;
 }
