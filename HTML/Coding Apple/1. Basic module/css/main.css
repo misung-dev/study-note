@@ -1,0 +1,22 @@
+.profile {
+	width: 300px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.name {
+	text-align: center;
+	font-size: 50px;
+	letter-spacing: 3px;
+}
+
+.property {
+	font-size: 20px;
+	color: green;
+}
+
+p {
+	font-weight: 500;
+	text-align: center;
+}
