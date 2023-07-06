@@ -8,23 +8,35 @@
 		<link href="css/main.css" rel="stylesheet" />
 	</head>
 	<body>
-		<div>
-			<table>
+		<div class="cart-background">
+			<h3 style="font-size: 25px">Your shopping cart</h3>
+			<table class="cart-table">
 				<thead>
 					<tr>
-						<th>1</th>
-						<td style="vertical-align: middle">2</td>
-						<td>3</td>
+						<td></td>
+						<td class="cell-long">ITEM</td>
+						<td style="vertical-align: middle">AMOUNT</td>
+						<td>PRICE</td>
+						<td>TOTAL</td>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<th>1</th>
-						<td>2</td>
-						<td>3</td>
+						<th><img src="img/item1.png" width="50px" /></th>
+						<td>척 70 시즈널 컬러 - 그린</td>
+						<td>1</td>
+						<td>70000</td>
+						<td>70000</td>
+					</tr>
+					<tr>
+						<td colspan="5" style="text-align: right">총가격 : 70000</td>
 					</tr>
 				</tbody>
 			</table>
+		</div>
+		<div>
+			<p class="edit-shopping-list">Edit your shopping cart</p>
+			<button class="choose-button">Choose payment method</button>
 		</div>
 	</body>
 </html>
