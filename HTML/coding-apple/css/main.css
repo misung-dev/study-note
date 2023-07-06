@@ -189,9 +189,16 @@ body {
 	max-width: 600px;
 	height: 150px;
 	margin: auto;
-	padding: 20px;
+	padding: 10px;
 	background-color: #eeeeee;
 	text-align: center;
 	position: relative;
 	top: -40px;
+}
+
+input[type="email"] {
+	padding: 10px;
+	font-size: 20px;
+	border: 2px solid black;
+	border-radius: 5px;
 }
