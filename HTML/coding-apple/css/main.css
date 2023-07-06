@@ -243,3 +243,12 @@ input[type="email"] {
 	margin-left: auto;
 	background-color: #f7f1e5;
 }
+
+td,
+th {
+	border: 1px solid black;
+}
+
+table {
+	border-collapse: collapse;
+}
