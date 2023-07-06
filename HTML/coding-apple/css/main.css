@@ -139,6 +139,14 @@ p {
 }
 
 /* layout2.html */
+div {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0px;
+}
+
 .main-background {
 	width: 100%;
 	height: 500px;
@@ -174,4 +182,16 @@ p {
 	right: 0px;
 	margin: auto;
 	width: 150px;
+}
+
+.explain-box {
+	width: 80%;
+	max-width: 600px;
+	height: 150px;
+	margin: auto;
+	padding: 20px;
+	background-color: #eeeeee;
+	text-align: center;
+	position: relative;
+	top: -40px;
 }
