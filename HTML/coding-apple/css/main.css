@@ -406,3 +406,39 @@ table {
 		font-size: 10px;
 	}
 }
+
+/* 반응형 레이아웃 숙제 : 가로정렬 레이아웃 */
+.product-container {
+	width: 80%;
+	max-width: 600px;
+	margin: auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+.product-container div {
+	float: left;
+	width: 25%;
+}
+
+@media screen and (max-width: 1200px) {
+	.main-title {
+		font-size: 30px;
+	}
+	.product-container div {
+		width: 50%;
+	}
+	.product-container {
+		max-width: 600px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.main-title {
+		font-size: 20px;
+	}
+	.product-container div {
+		width: 100%;
+	}
+}
