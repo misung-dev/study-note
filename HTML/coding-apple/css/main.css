@@ -157,6 +157,7 @@ body {
 	font-family: "예쁜폰트";
 }
 
+/* 글자가 깨지는 것을 예방해줌 */
 p,
 h4,
 h3,
@@ -164,6 +165,22 @@ h2,
 h1,
 span {
 	transform: rotate(0.03deg);
+}
+
+/* 박스 정렬 및 형태 */
+.nav-container {
+	display: flex;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	margin: 0 auto;
+	color: #eeeeee;
+}
+
+.nav-item {
+	width: 100%;
+
+	background-color: #609966;
 }
 
 .main-background {
