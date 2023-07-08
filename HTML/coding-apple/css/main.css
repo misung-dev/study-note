@@ -139,6 +139,13 @@ p {
 }
 
 /* layout2.html */
+
+@font-face {
+	font-family: "예쁜폰트";
+	src: url(../font/NanumSquareAcB.woff);
+	font-weight: 800;
+}
+
 div,
 input,
 textarea {
@@ -147,6 +154,16 @@ textarea {
 
 body {
 	margin: 0px;
+	font-family: "예쁜폰트";
+}
+
+p,
+h4,
+h3,
+h2,
+h1,
+span {
+	transform: rotate(0.03deg);
 }
 
 .main-background {
