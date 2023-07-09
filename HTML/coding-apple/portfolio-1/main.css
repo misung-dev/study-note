@@ -1,0 +1,183 @@
+body {
+	margin: 0;
+}
+div {
+	box-sizing: border-box;
+}
+/* 랜딩페이지 */
+.main-background {
+	width: 100%;
+	height: 500px;
+	border: none;
+	background: linear-gradient(#499add, #4e61c0);
+	padding: 5%;
+	color: white;
+}
+
+.main-container {
+	max-width: 1200px;
+	margin: auto;
+}
+
+.main-text {
+	float: auto;
+}
+
+.main-container-btn {
+	width: 120px;
+	height: 50px;
+	background-color: #444;
+	color: white;
+	border-radius: 5px;
+	border: none;
+	font-size: 15px;
+}
+
+.main-iphone {
+	height: 400px;
+	position: absolute;
+	left: 60%;
+	top: 100px;
+}
+
+@media screen and (max-width: 768px) {
+	.main-background {
+		font-size: 90%;
+		text-align: center;
+	}
+	.main-container-btn {
+		font-size: 90%;
+		width: 100px;
+		height: 40px;
+		text-align: center;
+	}
+	.main-iphone {
+		height: 300px;
+		position: absolute;
+		display: block;
+		margin-top: 100px;
+		right: auto;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	.service-items {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.service-items div {
+		width: 100%;
+	}
+	.portfolio-container {
+		float: none;
+		width: 100%;
+	}
+}
+
+/* 포트폴리오  */
+.show-portfolio {
+	text-align: center;
+	padding: 50px;
+}
+
+.show-portfolio-btn {
+	width: 150px;
+	height: 50px;
+	background-color: #444;
+	color: white;
+	border-radius: 5px;
+	border: none;
+	font-size: 15px;
+}
+
+/*  서비스 안내 */
+.service {
+	background-color: #4e61c0;
+	padding: 50px;
+	color: white;
+	text-align: center;
+}
+
+.service-items {
+	display: flex;
+}
+.service-items div {
+	width: 25%;
+}
+
+.service i {
+	background-color: white;
+	color: #4e61c0;
+	border-radius: 50px;
+	width: 100px;
+	height: 100px;
+	padding-top: 28px;
+	box-sizing: border-box;
+	margin-top: 25px;
+	font-size: 40px;
+}
+
+/* 포트폴리오 */
+.portfolio {
+	text-align: center;
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+.portfolio-container {
+	text-align: left;
+	max-width: 1200px;
+	margin: auto;
+	padding: 30px;
+}
+
+.portfolio-item1 {
+	float: left;
+	width: 50%;
+	height: 350px;
+	background-image: url(img/portfolio-1.jpg);
+	background-size: cover;
+	position: relative;
+}
+.portfolio-item2 {
+	float: left;
+	width: 50%;
+	height: 350px;
+	background-image: url(img/portfolio-2.jpg);
+	background-size: cover;
+	position: relative;
+}
+.portfolio-item3 {
+	float: left;
+	width: 50%;
+	height: 350px;
+	background-image: url(img/portfolio-3.jpg);
+	background-size: cover;
+	position: relative;
+}
+.portfolio-item4 {
+	float: left;
+	width: 50%;
+	height: 350px;
+	background-image: url(img/portfolio-4.jpg);
+	background-size: cover;
+	position: relative;
+}
+
+.portfolio-text {
+	color: white;
+	padding: 50px;
+	width: 100%;
+}
+
+.white-box {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border: 0px solid white;
+	transition: border 0.5s;
+}
+
+.white-box:hover {
+	border: 30px solid white;
+}
