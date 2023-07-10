@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Bootstrap CSS -->
+		<link
+			href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+			rel="stylesheet"
+			id="bootstrap-css"
+		/>
+
+		<title>Document</title>
+		<style>
+			.white-box {
+				background: white;
+				padding: 20px;
+				border-radius: 5px;
+				box-shadow: 0.5px 0.5px 2px 1px #eee;
+				margin: 20px;
+			}
+
+			.pill {
+				display: inline-block;
+				border: 1px solid lightgray;
+				border-radius: 100px;
+				padding: 3px 12px 5px 12px;
+				margin-right: 2px;
+				margin-bottom: 5px;
+			}
+		</style>
+	</head>
+	<body style="background: #f7f9fc">
+		<div>
+			<!-- 프로필 -->
+			<div class="container white-box">
+				<div class="row">
+					<div class="col-md-8">
+						<div class="d-flex">
+							<div class="flex-shrink-0">
+								<img src="profile-pic.png" />
+							</div>
+							<div class="flex-grow-1 ms-3">
+								<h3>Killian Sven</h3>
+								<p>Front-end Designer</p>
+								<p>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="16"
+										height="16"
+										fill="currentColor"
+										class="bi bi-geo-alt-fill"
+										viewBox="0 0 16 16"
+									>
+										<path
+											d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+										/>
+									</svg>
+									서울 마포구
+								</p>
+								<button class="btn btn-primary">연락하기</button>
+							</div>
+						</div>
+					</div>
+
+					<!-- 세부 프로필 -->
+					<div class="col-md-4">
+						<div class="row">
+							<div class="col-6">
+								<p>Locoation</p>
+							</div>
+							<div class="col-6">
+								<p>서울근무</p>
+							</div>
+
+							<div class="col-6">
+								<p>Age</p>
+							</div>
+							<div class="col-6">
+								<p>많음</p>
+							</div>
+
+							<div class="col-6">
+								<p>Experience</p>
+							</div>
+							<div class="col-6">
+								<p>신입</p>
+							</div>
+
+							<div class="col-6">
+								<p>School</p>
+							</div>
+							<div class="col-6">
+								<p>천조국대 토목학과</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 세부사항 -->
+			<div>
+				<div class="row">
+					<!-- 하단 왼쪽 상자 -->
+					<div class="col-3">
+						<div class="white-box">
+							<h3>WORKS</h3>
+							<p>
+								Landing page design<br />
+								Flyer design<br />
+								Vue.js To-do app<br />
+								Shopping page design
+							</p>
+						</div>
+					</div>
+
+					<!-- 하단 가운데 상자 -->
+					<div class="col-6">
+						<div class="white-box">
+							<div>
+								<h3>ABOUT</h3>
+								<p>
+									I am a front-end designer who is excellent at Bootstrap, Sass, Foundation. I have
+									dealt lots of in-house design works and outsource things. If you want to check my
+									portfolio, please visit Killiansven.com
+								</p>
+							</div>
+
+							<div>
+								<h3>SKILLS</h3>
+								<span class="pill">HTML5</span>
+								<span class="pill">JavaScript</span>
+								<span class="pill">CSS3</span>
+								<span class="pill">Illustrator</span>
+								<span class="pill">Photoshop</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- 하단 오른쪽 상자 -->
+					<div class="col-3">
+						<div class="white-box">
+							<h5>Find me at Linkedout.com</h5>
+							<button type="button" class="btn btn-primary">Sign Up</button>
+							<p>Already member?</p>
+						</div>
+						<div>
+							<h5>People You Might Know</h5>
+							<div class="row">
+								<div class="col-md-4">
+									<div class="d-flex">
+										<div class="flex-shrink-0">
+											<img src="profile-pic.png" style="width: 100px" />
+										</div>
+									</div>
+								</div>
+								<div class="col-md-8">
+									<div class="flex-grow-1 ms-3" style="padding-left: 20px">
+										<h5>Jason</h5>
+										<p>Developer</p>
+										<p>
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												width="16"
+												height="16"
+												fill="currentColor"
+												class="bi bi-geo-alt-fill"
+												viewBox="0 0 16 16"
+											>
+												<path
+													d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+												/>
+											</svg>
+											서울 마포구
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	</body>
+</html>
