@@ -509,3 +509,13 @@ table {
 	margin-top: 100%;
 	transition: all 1s;
 }
+
+/* 약간 쓸데없는 Pseudo-element */
+.input-file::file-selector-button {
+	background: skyblue;
+	border: none;
+	padding: 20px;
+}
+.input-file::file-selector-button:hover {
+	background: blue;
+}
