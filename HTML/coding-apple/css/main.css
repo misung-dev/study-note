@@ -286,10 +286,10 @@ input[type="email"] {
 
 /* cart.html */
 
-td,
+/* td,
 th {
-	/* border: 1px solid black; */
-}
+	border: 1px solid black;
+} */
 
 .cart-table td,
 .cart-table th {
