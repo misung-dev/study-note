@@ -1,15 +1,19 @@
-.btn-blue, .btn-green {
+.div-blue, .div-red, .div-green {
   width: 200px;
   height: 200px;
   padding: 20px;
 }
 
-.btn-green {
-  color: green;
+.div-green {
+  background-color: green;
 }
 
-.btn-blue {
-  color: blue;
+.div-red {
+  background-color: red;
+}
+
+.div-blue {
+  background-color: blue;
 }
 
 .background {

@@ -1,17 +1,20 @@
-%btn {
+%div {
 	width: 200px;
 	height: 200px;
 	padding: 20px;
 }
 
-.btn-green {
-	@extend %btn;
-	color: green;
+.div-green {
+	@extend %div;
+	background-color: green;
 }
-
-.btn-blue {
-	@extend %btn;
-	color: blue;
+.div-red {
+	@extend %div;
+	background-color: red;
+}
+.div-blue {
+	@extend %div;
+	background-color: blue;
 }
 
 $메인칼라: #2a4cb2;
