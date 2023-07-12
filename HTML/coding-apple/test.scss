@@ -1,30 +1,18 @@
-%div {
-	width: 200px;
-	height: 200px;
-	padding: 20px;
+@use "reset";
+
+@mixin 폰트스타일($구멍) {
+	font-size: $구멍;
+	letter-spacing: -1px;
 }
 
-.div-green {
-	@extend %div;
-	background-color: green;
+h2 {
+	@include 폰트스타일(40px);
 }
-.div-red {
-	@extend %div;
-	background-color: red;
+h3 {
+	@include 폰트스타일(30px);
+	color: reset.$메인칼라;
 }
-.div-blue {
-	@extend %div;
-	background-color: blue;
-}
-
-$메인칼라: #2a4cb2;
-$서브칼라: #eeeeee;
-$기본사이즈: 20px;
-
-.background {
-	background-color: $메인칼라;
-}
-
-.box {
-	color: $서브칼라;
+h4 {
+	font-size: 10px;
+	letter-spacing: -1px;
 }
