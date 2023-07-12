@@ -1,3 +1,19 @@
+%btn {
+	width: 200px;
+	height: 200px;
+	padding: 20px;
+}
+
+.btn-green {
+	@extend %btn;
+	color: green;
+}
+
+.btn-blue {
+	@extend %btn;
+	color: blue;
+}
+
 $메인칼라: #2a4cb2;
 $서브칼라: #eeeeee;
 $기본사이즈: 20px;

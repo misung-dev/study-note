@@ -1,3 +1,17 @@
+.btn-blue, .btn-green {
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+}
+
+.btn-green {
+  color: green;
+}
+
+.btn-blue {
+  color: blue;
+}
+
 .background {
   background-color: #2a4cb2;
 }
