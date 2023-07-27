@@ -529,3 +529,121 @@ audio {
 	margin-right: auto;
 	margin-bottom: 50px;
 }
+
+/*  transform & animation 으로 매끄러운 애니메이션 만들기 */
+.ani-text {
+	text-align: center;
+}
+.ani-text:hover {
+	animation-name: 왔다갔다;
+	animation-duration: 1s;
+	animation-iteration-count: 3;
+}
+
+/*transform 변경보다 margin 변경이 더 느림*/
+@keyframes 왔다갔다 {
+	0% {
+		transform: translateX(0px); /* 애니메이션이 0%만큼 동작시 */
+	}
+	50% {
+		transform: translateX(-100px); /* 애니메이션이 50%만큼 동작시 */
+	}
+	75% {
+		transform: translateX(100px); /* 애니메이션이 75%만큼 동작시 */
+	}
+	100% {
+		transform: translateX(0px); /* 애니메이션이 100%만큼 동작시 */
+	}
+}
+
+/* transform & animation 숙제 (움직이는 메뉴) - 1 */
+.ani-button {
+	padding: 15px 20px;
+	font-size: 20px;
+	background: skyblue;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	display: block;
+	margin: 30px auto;
+}
+.ani-button:hover {
+	animation-name: shake;
+	animation-duration: 1s;
+}
+
+@keyframes shake {
+	0% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(-8deg);
+	}
+	50% {
+		transform: rotate(8deg);
+	}
+	75% {
+		transform: rotate(-8deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+/* transform & animation 숙제 (움직이는 메뉴) - 2 */
+.ani-x {
+	margin: 50px auto;
+	text-align: center;
+	font-size: 70px;
+	width: 84px;
+	cursor: pointer;
+}
+.ani-x:hover {
+	animation-name: turn;
+	animation-duration: 1s;
+	animation-fill-mode: forwards; /*애니메이션 끝났을 때 상태유지 */
+}
+@keyframes turn {
+	0% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(-15deg);
+	}
+	100% {
+		transform: rotate(45deg) scale(2);
+	}
+}
+
+/* transform & animation 숙제 (움직이는 메뉴) - 3 */
+.ani-navbar {
+	width: 200px;
+	background-color: black;
+	color: white;
+	height: 100%;
+	padding: 25px;
+	position: fixed;
+	z-index: 5;
+	text-align: right;
+	transition: all 1s;
+	transform: translateX(-150px);
+}
+.ani-navbar:hover {
+	transform: translateX(0px);
+	text-align: center;
+}
+.ani-navbar:hover p {
+	animation-name: slide;
+	animation-duration: 1s;
+}
+@keyframes slide {
+	0% {
+		transform: translateX(-250px);
+	}
+	50% {
+		transform: translateX(20px) skewX(-30deg);
+	}
+	100% {
+		transform: translateX(0px);
+	}
+}
