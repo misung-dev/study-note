@@ -1,0 +1,61 @@
+.grid-container {
+	display: grid;
+	width: 100%;
+	max-width: 600px;
+	margin: auto;
+	margin-bottom: 20px;
+	grid-template-columns: 100px 100px 100px 100px; /* 세로칸 갯수&사이즈, fr단위로 폭 지정 가능  */
+	grid-template-rows: 100px 100px 100px; /* 가로칸 갯수&사이즈 */
+	grid-template-areas:
+		"헤더 헤더 헤더 헤더"
+		"사이드 내용 내용 내용"
+		"사이드 내용 내용 내용";
+}
+
+.grid-container div {
+	border: 1px solid black;
+}
+
+.grid-nav {
+	grid-area: 헤더; /*자식에 이름쓰고 부모는 색칠하기 */
+}
+
+.grid-sidebar {
+	grid-area: 사이드;
+}
+
+.grid-center {
+	grid-area: 내용;
+}
+
+/* 레이아웃 만들기 4 숙제 (인스타그램 격자 레이아웃) */
+.grid-container2 {
+	display: grid;
+	width: 100%;
+	max-width: 600px;
+	margin: auto;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+}
+.grid-container2 img {
+	width: 100%;
+	display: block; /*레이아웃 사이의 하얀줄 제거(이미지는 글자랑 비슷한 취급을 받아서 글자의 베이스 라인 위에 그림이 채워지는 형식*/
+}
+.grid-container2 div {
+	border: 1px solid black;
+	width: auto;
+	height: auto;
+}
+.grid-first-img {
+	grid-column: 1/3; /* 세로선 1~3만큼 차지해주세요 */
+	grid-row: 1/3;
+}
+@media screen and (max-width: 768px) {
+	.grid-container2 {
+		grid-template-columns: 1fr;
+	}
+	.grid-first-img {
+		grid-column: 1/2;
+		grid-row: 1/2;
+	}
+}
