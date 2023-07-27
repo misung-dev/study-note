@@ -519,3 +519,13 @@ table {
 .input-file::file-selector-button:hover {
 	background: blue;
 }
+
+/* HTML video, audio 다루기 */
+video,
+audio {
+	display: flex;
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 50px;
+}
