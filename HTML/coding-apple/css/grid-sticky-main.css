@@ -1,0 +1,17 @@
+.grey {
+	background-color: lightgray;
+	height: 2000px;
+	margin-top: 500px;
+}
+
+.image {
+	float: right;
+	width: 400px;
+	position: sticky; /*fixed와 유사하지만, 스크롤 되다가 어떤 상황에서 fixed가 된다는 점이 차이점*/
+	top: 100px;
+}
+
+.text {
+	float: left;
+	width: 300px;
+}
