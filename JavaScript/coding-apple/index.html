@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<h1 id="hello">안녕하세요</h1>
+		<h1 id="hi">초보예요</h1>
+
+		<script>
+			document.getElementById("hello").innerHTML = "안녕";
+			// html 문서의 id가 hello인 요소릴 찾아와 그거의 내부를 html...; .은 ~의 라고 해석이 됨
+			// 1.바꿀요소 id 2.무엇을 3.어떻게
+			document.getElementById("hello").style.color = "red";
+			document.getElementById("hi").innerHTML = "JS 고수예요";
+			document.getElementById("hi").style.fontSize = "16px";
+		</script>
+	</body>
+</html>
