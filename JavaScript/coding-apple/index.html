@@ -21,7 +21,7 @@
 
 		<title>Hello, world!</title>
 	</head>
-	<body class="dark">
+	<body>
 		<!-- 모달창 -->
 		<div class="black-bg">
 			<div class="white-bg">
@@ -137,21 +137,35 @@
 			<button id="login">로그인</button>
 		</div>
 
-		<!-- setTimeout 타이머주는 코드 -->
-		<div class="alert alert-danger"><span id="num">5</span>초 이내 구매시 사은품 증정</div>
+		<!-- 코드 3줄로 캐러셀 (이미지 슬라이드) 만들기 -->
+		<div style="overflow: hidden">
+			<div class="slide-container">
+				<div class="slide-box">
+					<img src="img/car1.png" />
+				</div>
+				<div class="slide-box">
+					<img src="img/car2.png" />
+				</div>
+				<div class="slide-box">
+					<img src="img/car3.png" />
+				</div>
+			</div>
+		</div>
+
+		<button class="slide-1">1</button>
+		<button class="slide-2">2</button>
+		<button class="slide-3">3</button>
 
 		<script>
-			var count = 5;
-
-			setInterval(function () {
-				count -= 1;
-				if (count >= 0) {
-					document.querySelector("#num").innerHTML = count;
-				}
-				if (count == 0) {
-					$(".alert").hide();
-				}
-			}, 1000);
+			$(".slide-2").on("click", function () {
+				$(".slide-container").css("transform", "translateX(-100vw)");
+			});
+			$(".slide-3").on("click", function () {
+				$(".slide-container").css("transform", "translateX(-200vw)");
+			});
+			$(".slide-1").on("click", function () {
+				$(".slide-container").css("transform", "translateX(0vw)");
+			});
 		</script>
 
 		<script>
