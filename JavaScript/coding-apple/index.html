@@ -54,12 +54,10 @@
 			$("#login").on("click", function () {
 				$(".black-bg").addClass("show-modal");
 				// document.querySelector(".black-bg").classList.add("show-modal");
-			});
-		</script>
 
-		<script>
-			document.getElementsByClassName("navbar-toggler")[0].addEventListener("click", function () {
-				document.getElementsByClassName("list-group")[0].classList.toggle("show");
+				$("#close").on("click", function () {
+					$(".black-bg").removeClass("show-modal");
+				});
 			});
 		</script>
 
