@@ -46,15 +46,27 @@
 				console.log("안녕");
 			});
 
-			$("form").on("submit", function () {
-				if (document.getElementById("email").value == "") {
-					alert("아이디 입력 안함");
+			$("form").on("submit", function (e) {
+				var 입력한값 = document.getElementById("email").value;
+
+				// 정규식으로 이메일형식 검증해보기
+				if (/\S+@\S+\.\S+/.test(입력한값)) {
+					alert("이메일형식아님");
+					e.preventDefault();
 				}
+
 				if (document.getElementById("pw").value == "") {
 					alert("비번 입력 안함");
 				}
 				if (document.getElementById("pw").value.length < 6) {
-					alert("비번이 짧음");
+					alert("비번 짧음");
+				}
+			});
+
+			$("form").on("submit", function (e) {
+				var 비번 = document.getElementById("pw").value;
+				if (/[A-Z]/.test(비번) == false) {
+					alert("대문자 없음");
 				}
 			});
 		</script>
