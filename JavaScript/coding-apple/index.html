@@ -21,7 +21,7 @@
 
 		<title>Hello, world!</title>
 	</head>
-	<body>
+	<body class="dark">
 		<!-- 모달창 -->
 		<div class="black-bg">
 			<div class="white-bg">
@@ -59,7 +59,7 @@
 			});
 		</script>
 
-		<!-- if/else, function 실력향상 -->
+		<!-- if/else, function 실력향상 - 1 -->
 		<script>
 			function 삼육구게임(num) {
 				if (num % 9 == 0) {
@@ -73,6 +73,7 @@
 			삼육구게임(18);
 		</script>
 
+		<!-- if/else, function 실력향상 - 2 -->
 		<script>
 			function 합격했냐(num1, num2) {
 				if (num1 < 40 || num2 < 40) {
@@ -90,11 +91,26 @@
 		<nav class="navbar navbar-light bg-light">
 			<div class="container-fluid">
 				<span class="navbar-brand">Navbar</span>
+				<span class="badge bg-dark">Dark 🔄</span>
 				<button class="navbar-toggler" type="button">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 			</div>
 		</nav>
+
+		<!-- 변수문법과 Dark mode 버튼만들기 -->
+		<script>
+			var count = 0;
+
+			$(".badge").on("click", function () {
+				count++;
+				if (count % 2 == 1) {
+					$(".badge").html("Light");
+				} else {
+					$(".badge").html("Dark");
+				}
+			});
+		</script>
 
 		<ul class="list-group">
 			<li class="list-group-item">An item</li>
