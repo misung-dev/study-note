@@ -110,14 +110,14 @@
 			</div>
 		</nav>
 
-		<!-- 스크롤 이벤트로 만드는 재밌는 기능들 -->
+		<!-- 페이지 스크롤바 100px 내리면 로고 폰트사이즈 작게 -->
 		<script>
-			window.addEventListener("scroll", function () {
-				// console.log(window.scrollY); 현재 페이지를 얼마나 위에서 부터 스크롤했는지 px 단위로 알려줌
-				// window.scrollTo(0, 100); 강제로 스크롤하기
-				// window.scrollBy(0, 100); 현재위치부터 강제로 스크롤하기
-				// $(window).on("scroll", function () {
-				// 	$(window).scrollTop(); 현재 스크롤바 이동을 jQuery를 이용
+			$(window).on("scroll", function () {
+				if (window.scrollY > 100) {
+					$(".navbar-brand").css("font-size", "20px");
+				} else {
+					$(".navbar-brand").css("font-size", "25px");
+				}
 			});
 		</script>
 
@@ -149,16 +149,20 @@
 		</div>
 
 		<!-- 박스 끝까지 스크롤시 알림띄우기 -->
-		<div class="lorem" style="height: 200px; overflow-y: scroll">
+		<div class="lorem" style="height: 150px; overflow-y: scroll">
 			회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관회원약관
 		</div>
 
+		<!-- 회원약관 박스 거의 끝까지 스크롤하면 alert 띄우기 -->
 		<script>
 			// div의 스크롤바 내린 양 + 100(눈에 보이는 div높이) == div의 실제높이
 			$(".lorem").on("scroll", function () {
 				var 스크롤양 = document.querySelector(".lorem").scrollTop;
 				var 실제높이 = document.querySelector(".lorem").scrollHeight;
-				console.log(스크롤양, 실제높이);
+				var 높이 = document.querySelector(".lorem").clientHeight;
+				if (스크롤양 + 높이 > 실제높이 - 10) {
+					alert("다읽음");
+				}
 			});
 		</script>
 
