@@ -70,3 +70,8 @@
 	font-size: 25px;
 	transition: all 1s;
 }
+
+/* Select 인풋 다루기 */
+.form-hide {
+	display: none;
+}
