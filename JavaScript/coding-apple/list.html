@@ -66,6 +66,18 @@
 			document.querySelectorAll(".card-body h5")[2].innerHTML = products[2].title;
 			document.querySelectorAll(".card-body p")[2].innerHTML = "가격 : " + products[2].price;
 		</script>
+
+		<!-- Ajax 1 : 개념정리 -->
+		<script>
+			$.get("https://codingapple1.github.io/hello.txt")
+				.done(function (data) {
+					console.log(data);
+				})
+				.fail(function (error) {
+					console.log("실패함");
+				});
+		</script>
+
 		<!-- 자바스크립트 코드 -->
 		<script src="tab.js"></script>
 
