@@ -33,14 +33,21 @@
 			</div>
 		</div>
 
-		<!-- Ajax 2 : 상품 더보기 버튼 만들기 -->
-		<div class="container">
-			<button class="btn btn-danger" id="more">더보기</button>
-		</div>
-
 		<!-- array에 자주 쓰는 sort, map, filter 함수 -->
 		<div class="container my-3">
 			<button class="btn btn-danger" id="price">가격순정렬</button>
+		</div>
+
+		<div class="container my-3">
+			<button class="btn btn-danger" id="sort1">다나가순정렬</button>
+		</div>
+
+		<div class="container my-3">
+			<button class="btn btn-danger" id="filter">6만원이하</button>
+		</div>
+
+		<div class="container">
+			<button class="btn btn-danger" id="more">더보기</button>
 		</div>
 
 		<script>
@@ -49,6 +56,15 @@
 				{ id: 1, price: 50000, title: "Springfield Shirt" },
 				{ id: 2, price: 60000, title: "Black Monastery" },
 			];
+
+			products.forEach((a, i) => {
+				var 템플릿 = `<div class="col-sm-4">
+								<img src="https://via.placeholder.com/600" class="w-100">
+								<h5>${products[i].title}</h5>
+								<p>가격 : ${products[i].price}</p>
+							</div>`;
+				$(".row").append(템플릿);
+			});
 
 			// 버튼누르면 products 자료 정렬
 			$("#price").click(function () {
@@ -68,16 +84,58 @@
 				});
 			});
 
-			// array에 자주 쓰는 filter 함수
-			var 어레이 = [7, 3, 5, 2, 40];
-			var 새어레이 = 어레이.filter(function (a) {
-				return a < 4;
+			// 버튼누르면 다나가순 정렬
+			$("#sort1").click(function () {
+				products.sort(function (a, b) {
+					if (a.title < b.title) {
+						return 1;
+					} else {
+						return -1;
+					}
+				});
+
+				$(".row").html(""); //카드 다 없애주셈
+
+				products.forEach((a, i) => {
+					var 템플릿 = `<div class="col-sm-4">
+								<img src="https://via.placeholder.com/600" class="w-100">
+								<h5>${products[i].title}</h5>
+								<p>가격 : ${products[i].price}</p>
+							</div>`;
+					$(".row").append(템플릿);
+				});
 			});
 
-			// array에 자주 쓰는 map 함수
-			var 어레이 = [7, 3, 5, 2, 40];
-			var 새어레이 = 어레이.map(function (a) {
-				return a * 4;
+			// 6만원이하 상품보기 버튼과 기능
+			$("#filter").click(function () {
+				var newProduct = products.filter(function (a) {
+					return a.price <= 60000;
+				});
+
+				$(".row").html(""); //카드 다 없애주셈
+
+				products.forEach((a, i) => {
+					var 템플릿 = `<div class="col-sm-4">
+								<img src="https://via.placeholder.com/600" class="w-100">
+								<h5>${newProduct[i].title}</h5>
+								<p>가격 : ${newProduct[i].price}</p>
+							</div>`;
+					$(".row").append(템플릿);
+				});
+			});
+
+			// Ajax 2 : 상품 더보기 버튼 만들기
+			$("#more").click(function () {
+				$.get("https://codingapple1.github.io/js/more1.json").done((data) => {
+					data.forEach((a, i) => {
+						var 템플릿 = `<div class="col-sm-4">
+            <img src="https://via.placeholder.com/600" class="w-100">
+            <h5>${data[i].title}</h5>
+            <p>가격 : ${data[i].price}</p>
+          </div>`;
+						$(".row").append(템플릿);
+					});
+				});
 			});
 		</script>
 
