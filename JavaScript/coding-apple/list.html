@@ -62,8 +62,27 @@
 								<img src="https://via.placeholder.com/600" class="w-100">
 								<h5>${products[i].title}</h5>
 								<p>가격 : ${products[i].price}</p>
+								<button class="buy">구매</button>
 							</div>`;
 				$(".row").append(템플릿);
+			});
+
+			// 장바구니와 localStorage 기능
+
+			// 1.구매버튼 누르면
+			// 2. 지금 누른 버튼 윗윗 글자를 가져와서
+			// 3. localStrage 에 [글자] 저장
+
+			$(".buy").click(function (e) {
+				var title = $(e.target).siblings("h5").text();
+
+				if (localStorage.getItem("cart") != null) {
+					var 꺼낸거 = JSON.parse(localStorage.cart);
+					꺼낸거.push(title);
+					localStorage.setItem("cart", JSON.stringify(꺼낸거));
+				} else {
+					localStorage.setItem("cart", JSON.stringify([title]));
+				}
 			});
 
 			// 버튼누르면 products 자료 정렬
@@ -129,10 +148,10 @@
 				$.get("https://codingapple1.github.io/js/more1.json").done((data) => {
 					data.forEach((a, i) => {
 						var 템플릿 = `<div class="col-sm-4">
-            <img src="https://via.placeholder.com/600" class="w-100">
-            <h5>${data[i].title}</h5>
-            <p>가격 : ${data[i].price}</p>
-          </div>`;
+			         <img src="https://via.placeholder.com/600" class="w-100">
+			         <h5>${data[i].title}</h5>
+			         <p>가격 : ${data[i].price}</p>
+			       </div>`;
 						$(".row").append(템플릿);
 					});
 				});
