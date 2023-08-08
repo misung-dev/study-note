@@ -14,6 +14,17 @@ function App() {
 			</div>
 			<h4>{post}</h4>
 
+			{/* array, object state 변경하는 법 */}
+			<button
+				onClick={() => {
+					let copy = [...글제목];
+					copy.sort();
+					글제목변경(copy);
+				}}
+			>
+				가나다순정렬
+			</button>
+
 			<button
 				onClick={() => {
 					let copy = [...글제목];
