@@ -13,6 +13,14 @@ div {
 	border-bottom: 1px solid grey;
 }
 
+/* Component : 많은 div들을 한 단어로 줄이고 싶으면 */
+.modal {
+	margin-top: 20px;
+	padding: 20px;
+	background: #eee;
+	text-align: left;
+}
+
 /* 리액트에서 레이아웃 만들 때 쓰는 JSX 문법 3개 */
 .black-nav {
 	display: flex;
