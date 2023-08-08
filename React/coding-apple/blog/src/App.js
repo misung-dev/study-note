@@ -4,7 +4,7 @@ import { useState } from "react";
 
 function App() {
 	let post = "Contents";
-	let [글제목, b] = useState(["여자 코트 추천", "강남 우동 맛집", "파이썬 독학"]);
+	let [글제목, 글제목변경] = useState(["남자 코트 추천", "강남 우동 맛집", "파이썬 독학"]);
 	let [따봉, 따봉변경] = useState(0);
 
 	return (
@@ -13,6 +13,17 @@ function App() {
 				<h4 style={{ fontSize: "16px" }}>ReactBlog</h4>
 			</div>
 			<h4>{post}</h4>
+
+			<button
+				onClick={() => {
+					let copy = [...글제목];
+					copy[0] = "여자코트 추천";
+					글제목변경(copy);
+				}}
+			>
+				글수정
+			</button>
+
 			<div className="list">
 				<h4>
 					{글제목[0]}{" "}
