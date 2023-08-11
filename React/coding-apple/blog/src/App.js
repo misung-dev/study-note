@@ -6,6 +6,7 @@ function App() {
 	let post = "Contents";
 	let [글제목, 글제목변경] = useState(["남자 코트 추천", "강남 우동 맛집", "파이썬 독학"]);
 	let [따봉, 따봉변경] = useState(0);
+	let [modal, setModal] = useState(false);
 
 	return (
 		<div className="App">
@@ -13,7 +14,6 @@ function App() {
 				<h4 style={{ fontSize: "16px" }}>ReactBlog</h4>
 			</div>
 			<h4>{post}</h4>
-
 			{/* array, object state 변경하는 법 */}
 			<button
 				onClick={() => {
@@ -24,7 +24,6 @@ function App() {
 			>
 				가나다순정렬
 			</button>
-
 			<button
 				onClick={() => {
 					let copy = [...글제목];
@@ -54,11 +53,17 @@ function App() {
 				<p>2월 17일 발행</p>
 			</div>
 			<div className="list">
-				<h4>{글제목[2]}</h4>
+				<h4
+					onClick={() => {
+						setModal(true);
+					}}
+				>
+					{글제목[2]}
+				</h4>
 				<p>2월 17일 발행</p>
 			</div>
 
-			<Modal></Modal>
+			{modal == true ? <Modal /> : null}
 		</div>
 	);
 }
