@@ -4,7 +4,15 @@ function Header(props) {
 	return (
 		<header>
 			<h1>
-				<a href="">{props.title}</a>
+				<a
+					href="/"
+					onClick={(event) => {
+						event.preventDefault();
+						props.onChangeMode();
+					}}
+				>
+					{props.title}
+				</a>
 			</h1>
 		</header>
 	);
@@ -16,7 +24,16 @@ function Nav(props) {
 		let t = props.topics[i];
 		lis.push(
 			<li key={t.id}>
-				<a href={"/read/+t.id"}>{t.title}</a>
+				<a
+					id={t.id}
+					href={"/read/+t.id"}
+					onClick={(event) => {
+						event.preventDefault();
+						props.onChangeMode(event.target.id);
+					}}
+				>
+					{t.title}
+				</a>
 			</li>
 		);
 	}
@@ -44,8 +61,18 @@ function App() {
 	];
 	return (
 		<div className="App">
-			<Header title="REACT"></Header>
-			<Nav topics={topics}></Nav>
+			<Header
+				title="WEB"
+				onChangeMode={() => {
+					alert("Header");
+				}}
+			></Header>
+			<Nav
+				topics={topics}
+				onChangeMode={(id) => {
+					alert(id);
+				}}
+			></Nav>
 			<Article title="Welcome" body="Hello, WEB"></Article>
 		</div>
 	);
