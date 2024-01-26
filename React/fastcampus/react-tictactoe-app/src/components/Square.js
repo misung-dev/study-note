@@ -7,7 +7,7 @@ export default class Square extends Component {
 			<button
 				className="square"
 				onClick={() => {
-					this.setState({ value: "X" }); // state 변경하기
+					this.props.onClick(); // state 변경하기
 				}}
 			>
 				{this.props.value}

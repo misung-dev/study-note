@@ -10,8 +10,14 @@ export default class Board extends Component {
 		};
 	} // 각 배열에 null값 채우기
 
+	handleClick(i) {
+		const squares = this.state.squares.slice();
+		squares[i] = "X";
+		this.setState({ squares: squares }); // squares state를 변경함
+	}
+
 	renderSquare(i) {
-		return <Square value={this.state.squares[i]} />;
+		return <Square value={this.state.squares[i]} onClick={() => this.handleClick(i)} />;
 	}
 
 	render() {
