@@ -57,7 +57,9 @@ function App() {
 		return (
 			// key값이 없으면 오류 발생 (리액트가 변경, 추가 또는 제거된 항목을 식별)
 			<li key={move}>
-				<button onClick={() => jumpTo(move)}>{desc}</button>
+				<button className="move-button" onClick={() => jumpTo(move)}>
+					{desc}
+				</button>
 			</li>
 		);
 	});
@@ -69,12 +71,13 @@ function App() {
 
 	return (
 		<div className="game">
+			<div className="game-title">Tic Tac Toe</div>
 			<div className="game-board">
 				<Board squares={current.squares} onClick={(i) => handleClick(i)} />
 			</div>
 			<div className="game-info">
 				<div className="status">{status}</div>
-				<ol>{moves}</ol>
+				<ol style={{ listStyle: "none" }}>{moves}</ol>
 			</div>
 		</div>
 	);

@@ -9,7 +9,7 @@ const Board = ({ squares, onClick }) => {
 
 	// 함수형에서는 render없이 바로 return 함
 	return (
-		<div>
+		<div className="board-wrapper">
 			<div className="board-row">
 				{renderSquare(0)}
 				{renderSquare(1)}
