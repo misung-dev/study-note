@@ -5,6 +5,7 @@ import Board from "./components/Board";
 function App() {
 	const [history, setHistory] = useState([{ squares: Array(9).fill(null) }]);
 	const [xIsNext, setXIsNext] = useState(true);
+	const [stepNumber, setStepNumber] = useState(0);
 
 	const calculateWinner = (squares) => {
 		const lines = [
@@ -26,7 +27,7 @@ function App() {
 		return null;
 	};
 
-	const current = history[history.length - 1];
+	const current = history[stepNumber];
 	const winner = calculateWinner(current.squares);
 
 	let status;
@@ -37,24 +38,34 @@ function App() {
 	}
 
 	const handleClick = (i) => {
-		const newSquares = current.squares.slice();
+		const newHistory = history.slice(0, stepNumber + 1);
+		const newCurrent = newHistory[newHistory.length - 1];
+		const newSquares = newCurrent.squares.slice();
 		if (calculateWinner(newSquares) || newSquares[i]) {
 			return;
 		}
 
 		newSquares[i] = xIsNext ? "X" : "O";
-		setHistory([...history, { squares: newSquares }]);
+		setHistory([...newHistory, { squares: newSquares }]);
 		setXIsNext((prev) => !prev);
+
+		setStepNumber(newHistory.length);
 	};
 
 	const moves = history.map((step, move) => {
 		const desc = move ? "Go to Move #" + move : "Go to game start";
 		return (
+			// key값이 없으면 오류 발생 (리액트가 변경, 추가 또는 제거된 항목을 식별)
 			<li key={move}>
-				<button>{desc}</button>
+				<button onClick={() => jumpTo(move)}>{desc}</button>
 			</li>
 		);
 	});
+
+	const jumpTo = (step) => {
+		setStepNumber(step);
+		setXIsNext(step % 2 === 0); // true로 설정
+	};
 
 	return (
 		<div className="game">
